@@ -6,8 +6,8 @@ import 'package:prayer/src/presentation/blocs/remote_prayer/remote_prayer_cubits
 final GetIt getIt = GetIt.instance;
 
 void setup() {
-  getIt.registerLazySingleton<Prayer_Cubit>(
-        () => Prayer_Cubit(),
+  getIt.registerLazySingleton<PrayerCubit>(
+        () => PrayerCubit(),
   );
   getIt.registerLazySingleton<Receive_Controller>(
         () => Receive_Controller(),

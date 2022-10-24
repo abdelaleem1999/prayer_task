@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class Const_Divider extends StatelessWidget {
+class ConstDivider extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {

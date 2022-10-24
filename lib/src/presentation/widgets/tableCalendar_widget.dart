@@ -14,7 +14,7 @@ import '../blocs/remote_prayer/remote_prayer_cubits.dart';
 import '../blocs/remote_prayer/remote_prayer_states.dart';
 
 
-class TableCalendar_Widget extends HookWidget {
+class TableCalendarWidget extends HookWidget {
   @override
   DateTime _focusedDay = DateTime.now();
   DateTime? _selectedDay;
@@ -69,16 +69,16 @@ Prayer? prayer;
               _FocusedDay.value = focusedDay;
 
 
-              Prayer_Cubit.of(context).emit(PrayerLoading());
+              PrayerCubit.of(context).emit(PrayerLoading());
 
               getIt.get<Receive_Controller>().New_prayer_model= await getIt.get<Receive_Controller>().getNextData(
-                  Prayer_Cubit.of(context).locationData!.latitude!,
-                  Prayer_Cubit.of(context).locationData!.latitude!,
+                  PrayerCubit.of(context).locationData!.latitude!,
+                  PrayerCubit.of(context).locationData!.latitude!,
                   _FocusedDay.value.month, _FocusedDay.value.year
 
               );
 
-              Prayer_Cubit.of(context).emit(PrayerInital());
+              PrayerCubit.of(context).emit(PrayerInital());
 
           }
           // HomeCubit.of(context).index_of_seclectDay=_FocusedDay.value.day;

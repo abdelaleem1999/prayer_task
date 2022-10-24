@@ -3,8 +3,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:prayer/src/presentation/widgets/divider.dart';
 import 'package:prayer/src/presentation/widgets/text_constractor.dart';
 
-class Component_Prayer_Body extends StatefulWidget {
-  Component_Prayer_Body(
+class ComponentPrayerBody extends StatefulWidget {
+  ComponentPrayerBody(
       {this.Fajr, this.Sunrise, this.Dhuhr, this.Asr, this.Maghrib, this.Asha});
 
   final String? Fajr;
@@ -14,45 +14,45 @@ class Component_Prayer_Body extends StatefulWidget {
   final String? Maghrib;
   final String? Asha;
 
-  _Component_Prayer_BodyState createState() => _Component_Prayer_BodyState();
+  _ComponentPrayerBodyState createState() => _ComponentPrayerBodyState();
 }
 
-class _Component_Prayer_BodyState extends State<Component_Prayer_Body> {
+class _ComponentPrayerBodyState extends State<ComponentPrayerBody> {
   Widget build(BuildContext context) {
     return Column(
       mainAxisAlignment: MainAxisAlignment.start,
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         TextConstractor(
-          prayer_name: "Fajr ",
-          prayer_value: widget.Fajr!,
+          prayerName: "Fajr ",
+          prayerValue: widget.Fajr!,
         ),
-        Const_Divider(),
+        ConstDivider(),
         TextConstractor(
-          prayer_name: "Sunrise ",
-          prayer_value: widget.Sunrise!,
+          prayerName: "Sunrise ",
+          prayerValue: widget.Sunrise!,
         ),
-        Const_Divider(),
+        ConstDivider(),
         TextConstractor(
-          prayer_name: "Dhuhr ",
-          prayer_value: widget.Dhuhr!,
+          prayerName: "Dhuhr ",
+          prayerValue: widget.Dhuhr!,
         ),
-        Const_Divider(),
+        ConstDivider(),
         TextConstractor(
-          prayer_name: "Asr ",
-          prayer_value: widget.Asr!,
+          prayerName: "Asr ",
+          prayerValue: widget.Asr!,
         ),
-        Const_Divider(),
+        ConstDivider(),
         TextConstractor(
-          prayer_name: "Maghrib ",
-          prayer_value: widget.Maghrib!,
+          prayerName: "Maghrib ",
+          prayerValue: widget.Maghrib!,
         ),
-        Const_Divider(),
+        ConstDivider(),
         TextConstractor(
-          prayer_name: "Asha",
-          prayer_value: widget.Asha!,
+          prayerName: "Asha",
+          prayerValue: widget.Asha!,
         ),
-        Const_Divider(),
+        ConstDivider(),
       ],
     );
   }

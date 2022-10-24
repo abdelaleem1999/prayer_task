@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class Intial_Body extends StatelessWidget {
+class IntialBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {

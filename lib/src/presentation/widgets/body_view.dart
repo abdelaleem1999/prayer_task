@@ -7,8 +7,8 @@ import 'package:prayer/src/presentation/widgets/tableCalendar_widget.dart';
 
 import '../../data/repositories/model_controller.dart';
 
-class Body_View extends StatelessWidget {
-  Body_View({
+class BodyView extends StatelessWidget {
+  BodyView({
     this.state,
 });
 Object? state;
@@ -20,7 +20,7 @@ Object? state;
         backgroundColor: Color(0xFF9CDCDA),
         body: Column(
           children: [
-            TableCalendar_Widget(),
+            TableCalendarWidget(),
             Expanded(
               flex: 8,
               child: ClipRRect(
@@ -32,9 +32,9 @@ Object? state;
                       child: CircularProgressIndicator(),
                     )
                         :getIt.get<Receive_Controller>().New_prayer_model == null
-                        ?                       Intial_Body()
-                        :  Prayer_Body(
-                      Index_ofSelectDay:getIt.get<Receive_Controller>().Index! ,
+                        ?                       IntialBody()
+                        :  PrayerBody(
+                      indexOfSelectDay:getIt.get<Receive_Controller>().Index! ,
                       prayer: getIt.get<Receive_Controller>().New_prayer_model!,
                     )
                 ),

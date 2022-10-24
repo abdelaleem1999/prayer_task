@@ -5,18 +5,18 @@ import 'package:prayer/src/presentation/blocs/remote_prayer/remote_prayer_cubits
 import 'package:prayer/src/presentation/views/homeView.dart';
 void main() {
   setup();
-  runApp(const Prayer_Task());
+  runApp(const PrayerTask());
 }
 
-class Prayer_Task extends StatelessWidget {
-  const Prayer_Task({Key? key}) : super(key: key);
+class PrayerTask extends StatelessWidget {
+  const PrayerTask({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return MultiBlocProvider(
       providers: [
         BlocProvider(
-          create: (context) => Prayer_Cubit(),
+          create: (context) => PrayerCubit(),
         ),
 
 

@@ -8,10 +8,10 @@ class Receive_Controller {
   int? Index;
 
   getNextData(double x,double y ,int z ,int m) async {
-    return await getIt.get<Prayer_Cubit>().get_prayer(x,y,z,m);
+    return await getIt.get<PrayerCubit>().get_prayer(x,y,z,m);
 
   }
   checkLocation()async{
-    return await getIt.get<Prayer_Cubit>().check_Location();
+    return await getIt.get<PrayerCubit>().check_Location();
   }
 }

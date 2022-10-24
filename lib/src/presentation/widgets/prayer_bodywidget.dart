@@ -3,25 +3,25 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:prayer/src/presentation/widgets/component_Prayer_body.dart';
 import '../../data/models/prayer_model.dart';
 
-class Prayer_Body extends HookWidget {
-  Prayer_Body({
+class PrayerBody extends HookWidget {
+  PrayerBody({
     this.prayer,
-    this.Index_ofSelectDay,
+    this.indexOfSelectDay,
 });
   Prayer?  prayer;
-  int? Index_ofSelectDay;
+  int? indexOfSelectDay;
 
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
       itemCount:1 ,
-      itemBuilder:(context, index) =>  Component_Prayer_Body(
-        Asr:prayer!.data[Index_ofSelectDay!].timings.Asr,
-        Dhuhr:prayer!.data[Index_ofSelectDay!].timings.Dhuhr ,
-        Fajr:prayer!.data[Index_ofSelectDay!].timings.Fajr ,
-        Asha:prayer!.data[Index_ofSelectDay!].timings.Isha ,
-        Maghrib:prayer!.data[Index_ofSelectDay!].timings.Maghrib ,
-        Sunrise:prayer!.data[Index_ofSelectDay!].timings.Sunrise ,
+      itemBuilder:(context, index) =>  ComponentPrayerBody(
+        Asr:prayer!.data[indexOfSelectDay!].timings.Asr,
+        Dhuhr:prayer!.data[indexOfSelectDay!].timings.Dhuhr ,
+        Fajr:prayer!.data[indexOfSelectDay!].timings.Fajr ,
+        Asha:prayer!.data[indexOfSelectDay!].timings.Isha ,
+        Maghrib:prayer!.data[indexOfSelectDay!].timings.Maghrib ,
+        Sunrise:prayer!.data[indexOfSelectDay!].timings.Sunrise ,
       ),
     );
   }

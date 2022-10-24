@@ -11,10 +11,10 @@ class HomeView extends HookWidget {
   @override
   Widget build(BuildContext context) {
     useEffect(() {
-      Prayer_Cubit.of(context).check_Location();
+      PrayerCubit.of(context).check_Location();
     }, []);
     return BlocBuilder(
-      bloc: Prayer_Cubit.of(context),
+      bloc: PrayerCubit.of(context),
       builder: (context, state) {
         if (state is PrayerGetLocation) {
           return Scaffold(
@@ -23,7 +23,7 @@ class HomeView extends HookWidget {
             ),
           );
         } else {
-          return Body_View(
+          return BodyView(
             state: state,
           );
         }

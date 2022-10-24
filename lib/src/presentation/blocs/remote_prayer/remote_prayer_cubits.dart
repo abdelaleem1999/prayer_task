@@ -5,15 +5,15 @@ import 'package:location/location.dart';
 import 'package:prayer/src/data/models/prayer_model.dart';
 import 'package:prayer/src/presentation/blocs/remote_prayer/remote_prayer_states.dart';
 
-class Prayer_Cubit extends Cubit<PrayerState> {
-  Prayer_Cubit() : super(PrayerInital());
+class PrayerCubit extends Cubit<PrayerState> {
+  PrayerCubit() : super(PrayerInital());
 
-  static Prayer_Cubit of(context) => BlocProvider.of(context);
+  static PrayerCubit of(context) => BlocProvider.of(context);
   Location location = new Location();
   bool? check;
   PermissionStatus? permissions;
   LocationData? locationData;
-  Prayer? homeModel;
+  Prayer? prayerModel;
 
   Dio _dio = Dio();
   Future get_prayer(double latitude, double longitude , int month, int year) async {
@@ -23,10 +23,10 @@ class Prayer_Cubit extends Cubit<PrayerState> {
       final response = await _dio
           .get("http://api.aladhan.com/v1/calendar?latitude=${latitude}&longitude=${longitude}&method=2&month=$month&year=$year", options: Options());
 
-      homeModel = Prayer.fromJson(response.data);
+      prayerModel = Prayer.fromJson(response.data);
 
       emit(PrayerInital());
-      return homeModel;
+      return prayerModel;
 
     } catch (e) {
         throw

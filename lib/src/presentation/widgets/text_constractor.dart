@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 
 class TextConstractor extends StatelessWidget {
   TextConstractor({
-    this.prayer_name,
-    this.prayer_value
+    this.prayerName,
+    this.prayerValue
 });
- String? prayer_name;
- String? prayer_value;
+ String? prayerName;
+ String? prayerValue;
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -15,7 +15,7 @@ class TextConstractor extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Text(
-              "$prayer_name " ,
+              "$prayerName " ,
               style: TextStyle(
                   color: Color(0xF8010811),
                   fontWeight: FontWeight.bold,
@@ -23,7 +23,7 @@ class TextConstractor extends StatelessWidget {
               ),
             ),
           Text(
-            "$prayer_value" ,
+            "$prayerValue" ,
             style: TextStyle(
                 color: Color(0xF8010811),
                 fontSize: 15
